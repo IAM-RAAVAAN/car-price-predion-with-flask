@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 app=Flask(__name__)
-model=pickle.load(open('/run/media/swaraj/volume y/code/end_end_project/the_random_forest_for_car.pkl','rb'))
+model=pickle.load(open('the_random_forest_for_car.pkl','rb'))
 
 
 
