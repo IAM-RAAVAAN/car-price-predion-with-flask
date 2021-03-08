@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head><title>Popular Baby </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" media="screen" href="static/bootstrap.min.css">
+        	 	<link rel="stylesheet" href="static/bootstrap-theme.min.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<div style="color:rgb(72, 255, 0)">
+<form  action="{{url_for('predict')}}"  method="post">
+    <h2>The prediction of the data </h2>
+    <h2>enter the year</h2>
+    <input type="integer" name='Year' id='first' required="required">
+    <h2>purches prices</h2>
+    <input type="integer" name='Selling_Price' id='second'  required="required">
+    <h2>car driven in Kilometers</h2>
+    <input type="integer" name='Kms_Driven' id='third'   required="required">
+    <h2>Number of owners</h2>
+    <br><select id="fourth" name="Owner" required="required">
+                <option value=0>none</option>                
+                <option value=1>Second hand</option>
+                <option value=2>THird hand</option>
+                <option value=3>and onwards</option>
+            </select>
+    
+    <h2>Fuel type</h2>
+    <br><select name="Fuel_Type_Petrol" id="fuel" required="required">
+        <option value="Fuel_Type_Petrol">Fuel_Type_Petrol</option>  
+        <option value="Petrol">Petrol</option>                
+        <option value="Diesel">Diesel</option>
+        <option value="cng">CNG</option>
+    </select>
+
+    <h2>dealer or not</h2>
+    <br><select name="Seller_Type_Individual" id="resea" required="required">
+        <option value=0>Dealer</option>
+        <option value=1>Individual</option>
+    </select>
+    <h2>transmission</h2>
+    <br><select name="Transmission_Mannual" id="research" required="required">
+        <option value=1>Manual Car</option>
+        <option value=0>Automatic Car</option>
+    </select>
+    <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+    <br>
+        </form>
+<br><br><h3>{{ prediction_text }}<h3>
+</div>
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+</body>
