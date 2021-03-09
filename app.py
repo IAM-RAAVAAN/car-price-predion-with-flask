@@ -45,7 +45,7 @@ def predict():
         pre=model.predict([[Owner,Year,Kms_Driven,Present_Price,Seller_Type,Transmission,
              Fuel_Type_Diesel,Fuel_Type_Petrol]])
 
-        return render_template('home_practice.html',prediction_text="You Can Sell The Car at {}".format(pre))
+        return render_template('home_practice.html',prediction_text="You Can Sell The Car at",pre,'lacs')
     
 
 
