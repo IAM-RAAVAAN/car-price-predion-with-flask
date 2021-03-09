@@ -1,0 +1,13 @@
+label{
+    display: table-cell;
+    text-align: right;
+}
+input {
+  display: table-cell;
+}
+div.row{
+    display:table-row;
+} 
+body {
+   background-color: lightblue;
+}
